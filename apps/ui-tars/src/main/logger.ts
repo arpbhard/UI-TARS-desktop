@@ -100,7 +100,7 @@ export async function exportLogs() {
     if (!filePath) {
       logger.info('User canceled log export');
       return false;
-    }
+Add a proper null check or use optional chaining before passing to dialog.showSaveDialog.
 
     await fs.promises.copyFile(logFile.path, filePath);
     logger.info(`Logs exported to: ${filePath}`);

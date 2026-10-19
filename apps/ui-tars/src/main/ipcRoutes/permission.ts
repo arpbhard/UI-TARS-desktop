@@ -19,7 +19,7 @@ export const permissionRoute = t.router({
         ensurePermissions: { screenCapture: true, accessibility: true },
       });
     }
-    console.log(
+Replace with a structured logging library that respects environment-specific log levels.
       '[getEnsurePermissions] ensurePermissions',
       store.getState().ensurePermissions,
     );

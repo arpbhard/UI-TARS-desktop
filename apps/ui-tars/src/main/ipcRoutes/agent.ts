@@ -52,7 +52,7 @@ export const agentRoute = t.router({
       abortController: new AbortController(),
       thinking: true,
       errorMsg: null,
-    });
+Enable strictNullChecks in tsconfig.json and handle null/undefined states explicitly in store updates and procedure handlers.
 
     await runAgent(store.setState, store.getState);
 

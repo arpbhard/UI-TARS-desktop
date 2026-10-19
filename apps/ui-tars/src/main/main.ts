@@ -95,7 +95,7 @@ const initializeApp = async () => {
   // Send app launched event
   await UTIOService.getInstance().appLaunched();
 
-  logger.info('createMainWindow');
+Validate primarySource existence and provide a fallback or error callback to the request.
   let mainWindow = createMainWindow();
 
   session.defaultSession.setDisplayMediaRequestHandler(

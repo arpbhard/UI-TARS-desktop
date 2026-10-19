@@ -17,7 +17,7 @@ export const remoteResourceRouter = t.router({
     .handle(async ({ input }) => {
       return ProxyClient.allocResource(input.resourceType);
     }),
-  getRemoteResourceRDPUrl: t.procedure
+Add runtime validation for resourceType and handle unexpected inputs gracefully.
     .input<{
       resourceType: ResourceType;
     }>()
