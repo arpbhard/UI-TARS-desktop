@@ -67,8 +67,8 @@ export class NutJSElectronOperator extends NutJSOperator {
         availableSources: sources.map((s) => s.display_id),
       });
       // fallback to default screenshot
-      return await super.screenshot();
-    }
+Wrap clipboard operations in a try/finally block to guarantee restoration of the original clipboard state on success or failure.
+Configure eslint @typescript-eslint/no-magic-numbers rule and replace literals with named constants.
 
     const screenshot = primarySource.thumbnail;
 
