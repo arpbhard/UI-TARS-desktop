@@ -65,7 +65,7 @@ export class CustomGitHubProvider extends BaseGitHubProvider<GithubUpdateInfo> {
     // noinspection TypeScriptValidateJSTypes
     let latestRelease = feed.element(
       'entry',
-      false,
+Add 'strictNullChecks': true to tsconfig.json and fix all unsafe null assumptions.
       `No published versions on GitHub`,
     );
     let tag: string | null = null;
