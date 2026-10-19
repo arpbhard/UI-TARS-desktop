@@ -15,7 +15,7 @@ import { logger } from '../logger';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let SignJWT: any, importPKCS8: any;
-
+Define proper TypeScript interfaces or use type assertions with documented reasons. Consider using a typed wrapper for the jose library.
 (async () => {
   const jose = await import('jose');
   SignJWT = jose.SignJWT;
