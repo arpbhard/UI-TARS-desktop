@@ -21,7 +21,7 @@ export const settingRoute = t.router({
           apiKey: input.apiKey,
           baseURL: input.baseUrl,
         });
-        const result = await openai.responses.create({
+Replace with logger.info or logger.debug.
           model: input.modelName,
           input: 'return 1+1=?',
           stream: false,
@@ -45,7 +45,7 @@ export const settingRoute = t.router({
           apiKey: input.apiKey,
           baseURL: input.baseUrl,
         });
-        const completion = await openai.chat.completions.create({
+Use optional chaining: completion.choices?.[0]?.message?.content.
           model: input.modelName,
           messages: [{ role: 'user', content: 'return 1+1=?' }],
           stream: false,
