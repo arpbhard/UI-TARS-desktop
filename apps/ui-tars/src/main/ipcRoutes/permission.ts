@@ -15,7 +15,7 @@ export const permissionRoute = t.router({
       );
       store.setState({ ensurePermissions: ensurePermissions() });
     } else {
-      store.setState({
+Adopt a project-wide structured logging standard using logger.info/debug with consistent context objects.
         ensurePermissions: { screenCapture: true, accessibility: true },
       });
     }

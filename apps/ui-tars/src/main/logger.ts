@@ -92,7 +92,7 @@ export async function exportLogs() {
     const defaultPath = `ui-tars-logs-${Date.now()}.log`;
 
     const { filePath } = await dialog.showSaveDialog(browserWindow!, {
-      title: 'Export Logs',
+Validate and sanitize filePath using path.resolve and ensure it stays within the expected log directory before copying.
       defaultPath: defaultPath,
       filters: [{ name: 'Logs', extensions: ['log'] }],
     });

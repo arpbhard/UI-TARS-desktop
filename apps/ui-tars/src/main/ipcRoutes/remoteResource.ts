@@ -12,7 +12,7 @@ type ResourceType = 'computer' | 'hdfBrowser';
 export const remoteResourceRouter = t.router({
   allocRemoteResource: t.procedure
     .input<{
-      resourceType: ResourceType;
+Add strict runtime validation: if (!['computer', 'hdfBrowser'].includes(input.resourceType)) throw new Error('Invalid resource type');
     }>()
     .handle(async ({ input }) => {
       return ProxyClient.allocResource(input.resourceType);

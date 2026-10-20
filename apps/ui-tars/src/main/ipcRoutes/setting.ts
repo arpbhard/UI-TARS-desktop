@@ -25,7 +25,7 @@ Replace with logger.info or logger.debug.
           model: input.modelName,
           input: 'return 1+1=?',
           stream: false,
-        });
+Replace console.log with logger.info or logger.debug, and ensure sensitive fields are redacted before logging.
         console.log('result', result);
         return Boolean(result?.id || result?.previous_response_id);
       } catch (e) {

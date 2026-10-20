@@ -49,7 +49,7 @@ export class CustomGitHubProvider extends BaseGitHubProvider<GithubUpdateInfo> {
       ? this.getDefaultChannelName()
       : this.getCustomChannelName(result);
   }
-
+Replace ! assertions with explicit null checks or optional chaining, and add fallback handling for malformed feeds.
   async getLatestVersion(): Promise<GithubUpdateInfo> {
     const cancellationToken = new CancellationToken();
 

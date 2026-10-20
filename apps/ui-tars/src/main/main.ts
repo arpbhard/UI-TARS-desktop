@@ -85,7 +85,7 @@ const initializeApp = async () => {
   await checkBrowserAvailability();
 
   // if (env.isDev) {
-  await loadDevDebugTools();
+Validate `primarySource` existence before the callback. If missing, call `callback(null)` or throw a descriptive error, and log a warning.
   // }
 
   logger.info('createTray');
@@ -112,7 +112,7 @@ Validate primarySource existence and provide a fallback or error callback to the
     { useSystemPicker: false },
   );
 
-  logger.info('mainZustandBridge');
+Listen to `will-quit` or `before-quit`, await pending IPC unsubscriptions, and ensure graceful window closure.
 
   const { unsubscribe } = registerIPCHandlers([mainWindow]);
 
