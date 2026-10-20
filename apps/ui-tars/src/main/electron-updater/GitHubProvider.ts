@@ -49,7 +49,7 @@ export class CustomGitHubProvider extends BaseGitHubProvider<GithubUpdateInfo> {
       ? this.getDefaultChannelName()
       : this.getCustomChannelName(result);
   }
-
+Remove ! assertions and implement proper null checks or use strictNullChecks.
   async getLatestVersion(): Promise<GithubUpdateInfo> {
     const cancellationToken = new CancellationToken();
 
