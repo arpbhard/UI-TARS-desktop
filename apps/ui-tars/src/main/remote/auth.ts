@@ -19,7 +19,7 @@ Define proper TypeScript interfaces or use type assertions with documented reaso
 (async () => {
   const jose = await import('jose');
   SignJWT = jose.SignJWT;
-  importPKCS8 = jose.importPKCS8;
+Enable strict mode and replace `any` with explicit interfaces or `typeof jose.SignJWT` type annotations.
 })();
 
 const APP_DIR_NAME = '.ui-tars-desktop';
